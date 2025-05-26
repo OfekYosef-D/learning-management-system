@@ -806,6 +806,9 @@ video {
 .w-3\/4{
   width: 75%;
 }
+.w-3\/5{
+  width: 60%;
+}
 .w-4{
   width: 1rem;
 }
@@ -1039,6 +1042,10 @@ video {
 .border-transparent{
   border-color: transparent;
 }
+.\!bg-customgreys-secondarybg{
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(37 38 47 / var(--tw-bg-opacity)) !important;
+}
 .bg-background{
   background-color: hsl(var(--background));
 }
@@ -1073,6 +1080,10 @@ video {
 .bg-gray-700{
   --tw-bg-opacity: 1;
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
+.bg-gray-800{
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
 .bg-muted{
   background-color: hsl(var(--muted));
@@ -1111,14 +1122,6 @@ video {
 }
 .bg-transparent{
   background-color: transparent;
-}
-.bg-gray-800{
-  --tw-bg-opacity: 1;
-  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
-}
-.\!bg-customgreys-secondarybg{
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(37 38 47 / var(--tw-bg-opacity)) !important;
 }
 .p-0{
   padding: 0px;
@@ -1266,6 +1269,10 @@ video {
 .text-foreground{
   color: hsl(var(--foreground));
 }
+.text-gray-500{
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
 .text-muted-foreground{
   color: hsl(var(--muted-foreground));
 }
@@ -1302,10 +1309,6 @@ video {
 .text-white-50{
   --tw-text-opacity: 1;
   color: rgb(210 210 210 / var(--tw-text-opacity));
-}
-.text-gray-500{
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 .underline-offset-4{
   text-underline-offset: 4px;
@@ -4822,6 +4825,11 @@ input[type="color"] {
   background-color: hsl(var(--accent));
 }
 
+.hover\:bg-customgreys-secondarybg:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 38 47 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-destructive\/90:hover{
   background-color: hsl(var(--destructive) / 0.9);
 }
@@ -4849,11 +4857,6 @@ input[type="color"] {
 
 .hover\:bg-sidebar-accent:hover{
   background-color: hsl(var(--sidebar-accent));
-}
-
-.hover\:bg-customgreys-secondarybg:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(37 38 47 / var(--tw-bg-opacity));
 }
 
 .hover\:\!text-customgreys-darkGrey:hover{
