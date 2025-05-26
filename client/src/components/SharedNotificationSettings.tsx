@@ -78,7 +78,13 @@ const SharedNotificationSettings = ({
                     <CustomFormField 
                     name="notificationFrequency"
                     label = "Notification Frequency"
-                    type="select"/>
+                    type="select"
+                    options={[
+                        { value: "immediate", label: "Immediate" },
+                        { value: "daily", label: "Daily" },
+                        { value: "weekly", label: "Weekly" },
+                    ]}
+                    />
                 </div>
                 
             </form>
