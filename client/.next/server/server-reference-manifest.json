@@ -5,10 +5,15 @@
         "app/(dashboard)/user/settings/page": {
           "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CFullstack%20project%5C%5Cclient%5C%5Cnode_modules%5C%5C%40clerk%5C%5Cnextjs%5C%5Cdist%5C%5Cesm%5C%5Capp-router%5C%5Ckeyless-actions.js%22%2C%5B%5B%227f4125148546f18a458120bc60aacc779f8548fd72%22%2C%22syncKeylessConfigAction%22%5D%2C%5B%227f73506364622f9434252b3a7c6c02c9ce1b8952d9%22%2C%22deleteKeylessAction%22%5D%2C%5B%227f88ae1188a2d4715d3a00c2503554a4123a15b86a%22%2C%22createOrReadKeylessAction%22%5D%5D%5D%5D&__client_imported__=!",
           "async": false
+        },
+        "app/_not-found/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CFullstack%20project%5C%5Cclient%5C%5Cnode_modules%5C%5C%40clerk%5C%5Cnextjs%5C%5Cdist%5C%5Cesm%5C%5Capp-router%5C%5Ckeyless-actions.js%22%2C%5B%5B%227f4125148546f18a458120bc60aacc779f8548fd72%22%2C%22syncKeylessConfigAction%22%5D%2C%5B%227f73506364622f9434252b3a7c6c02c9ce1b8952d9%22%2C%22deleteKeylessAction%22%5D%2C%5B%227f88ae1188a2d4715d3a00c2503554a4123a15b86a%22%2C%22createOrReadKeylessAction%22%5D%5D%5D%5D&__client_imported__=!",
+          "async": false
         }
       },
       "layer": {
-        "app/(dashboard)/user/settings/page": "rsc"
+        "app/(dashboard)/user/settings/page": "rsc",
+        "app/_not-found/page": "rsc"
       }
     },
     "7f73506364622f9434252b3a7c6c02c9ce1b8952d9": {
@@ -16,10 +21,15 @@
         "app/(dashboard)/user/settings/page": {
           "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CFullstack%20project%5C%5Cclient%5C%5Cnode_modules%5C%5C%40clerk%5C%5Cnextjs%5C%5Cdist%5C%5Cesm%5C%5Capp-router%5C%5Ckeyless-actions.js%22%2C%5B%5B%227f4125148546f18a458120bc60aacc779f8548fd72%22%2C%22syncKeylessConfigAction%22%5D%2C%5B%227f73506364622f9434252b3a7c6c02c9ce1b8952d9%22%2C%22deleteKeylessAction%22%5D%2C%5B%227f88ae1188a2d4715d3a00c2503554a4123a15b86a%22%2C%22createOrReadKeylessAction%22%5D%5D%5D%5D&__client_imported__=!",
           "async": false
+        },
+        "app/_not-found/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CFullstack%20project%5C%5Cclient%5C%5Cnode_modules%5C%5C%40clerk%5C%5Cnextjs%5C%5Cdist%5C%5Cesm%5C%5Capp-router%5C%5Ckeyless-actions.js%22%2C%5B%5B%227f4125148546f18a458120bc60aacc779f8548fd72%22%2C%22syncKeylessConfigAction%22%5D%2C%5B%227f73506364622f9434252b3a7c6c02c9ce1b8952d9%22%2C%22deleteKeylessAction%22%5D%2C%5B%227f88ae1188a2d4715d3a00c2503554a4123a15b86a%22%2C%22createOrReadKeylessAction%22%5D%5D%5D%5D&__client_imported__=!",
+          "async": false
         }
       },
       "layer": {
-        "app/(dashboard)/user/settings/page": "rsc"
+        "app/(dashboard)/user/settings/page": "rsc",
+        "app/_not-found/page": "rsc"
       }
     },
     "7f88ae1188a2d4715d3a00c2503554a4123a15b86a": {
@@ -27,10 +37,15 @@
         "app/(dashboard)/user/settings/page": {
           "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CFullstack%20project%5C%5Cclient%5C%5Cnode_modules%5C%5C%40clerk%5C%5Cnextjs%5C%5Cdist%5C%5Cesm%5C%5Capp-router%5C%5Ckeyless-actions.js%22%2C%5B%5B%227f4125148546f18a458120bc60aacc779f8548fd72%22%2C%22syncKeylessConfigAction%22%5D%2C%5B%227f73506364622f9434252b3a7c6c02c9ce1b8952d9%22%2C%22deleteKeylessAction%22%5D%2C%5B%227f88ae1188a2d4715d3a00c2503554a4123a15b86a%22%2C%22createOrReadKeylessAction%22%5D%5D%5D%5D&__client_imported__=!",
           "async": false
+        },
+        "app/_not-found/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CFullstack%20project%5C%5Cclient%5C%5Cnode_modules%5C%5C%40clerk%5C%5Cnextjs%5C%5Cdist%5C%5Cesm%5C%5Capp-router%5C%5Ckeyless-actions.js%22%2C%5B%5B%227f4125148546f18a458120bc60aacc779f8548fd72%22%2C%22syncKeylessConfigAction%22%5D%2C%5B%227f73506364622f9434252b3a7c6c02c9ce1b8952d9%22%2C%22deleteKeylessAction%22%5D%2C%5B%227f88ae1188a2d4715d3a00c2503554a4123a15b86a%22%2C%22createOrReadKeylessAction%22%5D%5D%5D%5D&__client_imported__=!",
+          "async": false
         }
       },
       "layer": {
-        "app/(dashboard)/user/settings/page": "rsc"
+        "app/(dashboard)/user/settings/page": "rsc",
+        "app/_not-found/page": "rsc"
       }
     },
     "7ff432efac49df98a8683a3bed10fc6fdd9e6a196b": {
@@ -38,10 +53,15 @@
         "app/(dashboard)/user/settings/page": {
           "moduleId": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CFullstack%20project%5C%5Cclient%5C%5Cnode_modules%5C%5C%40clerk%5C%5Cnextjs%5C%5Cdist%5C%5Cesm%5C%5Capp-router%5C%5Cserver-actions.js%22%2C%5B%5B%227ff432efac49df98a8683a3bed10fc6fdd9e6a196b%22%2C%22invalidateCacheAction%22%5D%5D%5D%5D&__client_imported__=true!",
           "async": false
+        },
+        "app/_not-found/page": {
+          "moduleId": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CFullstack%20project%5C%5Cclient%5C%5Cnode_modules%5C%5C%40clerk%5C%5Cnextjs%5C%5Cdist%5C%5Cesm%5C%5Capp-router%5C%5Cserver-actions.js%22%2C%5B%5B%227ff432efac49df98a8683a3bed10fc6fdd9e6a196b%22%2C%22invalidateCacheAction%22%5D%5D%5D%5D&__client_imported__=true!",
+          "async": false
         }
       },
       "layer": {
-        "app/(dashboard)/user/settings/page": "action-browser"
+        "app/(dashboard)/user/settings/page": "action-browser",
+        "app/_not-found/page": "action-browser"
       }
     }
   },
