@@ -46,6 +46,7 @@ const morgan_1 = __importDefault(require("morgan"));
 const dynamoose = __importStar(require("dynamoose"));
 const express_2 = require("@clerk/express");
 const userClerkRoutes_1 = __importDefault(require("./routes/userClerkRoutes"));
+const transactionRoute_1 = __importDefault(require("./routes/transactionRoute"));
 /* ROUTE IMPORTS */
 const courseRoutes_1 = __importDefault(require("./routes/courseRoutes"));
 /* CONFIGURATIONS */
@@ -72,6 +73,7 @@ app.get('/', (req, res) => {
 });
 app.use("/courses", courseRoutes_1.default);
 app.use('/users/clerk', (0, express_2.requireAuth)(), userClerkRoutes_1.default);
+app.use("/transactions", (0, express_2.requireAuth)(), transactionRoute_1.default);
 /* SERVER */
 const port = process.env.PORT || 3000;
 if (!isProduction) {
