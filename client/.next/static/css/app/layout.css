@@ -663,6 +663,9 @@ video {
 .z-\[1\]{
   z-index: 1;
 }
+.m-0{
+  margin: 0px;
+}
 .-mx-1{
   margin-left: -0.25rem;
   margin-right: -0.25rem;
@@ -681,6 +684,12 @@ video {
 }
 .mb-1{
   margin-bottom: 0.25rem;
+}
+.mb-2{
+  margin-bottom: 0.5rem;
+}
+.mb-4{
+  margin-bottom: 1rem;
 }
 .mb-\[2px\]{
   margin-bottom: 2px;
@@ -733,6 +742,9 @@ video {
 }
 .h-12{
   height: 3rem;
+}
+.h-16{
+  height: 4rem;
 }
 .h-2{
   height: 0.5rem;
@@ -793,6 +805,9 @@ video {
 }
 .w-10{
   width: 2.5rem;
+}
+.w-16{
+  width: 4rem;
 }
 .w-2{
   width: 0.5rem;
@@ -990,6 +1005,9 @@ video {
 .whitespace-nowrap{
   white-space: nowrap;
 }
+.rounded{
+  border-radius: 0.25rem;
+}
 .rounded-full{
   border-radius: 9999px;
 }
@@ -1182,6 +1200,10 @@ video {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
+.py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
 .py-4{
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -1201,6 +1223,9 @@ video {
 }
 .pt-0{
   padding-top: 0px;
+}
+.pt-4{
+  padding-top: 1rem;
 }
 .text-left{
   text-align: left;
@@ -1222,13 +1247,24 @@ video {
   font-size: 1.125rem;
   line-height: 1.75rem;
 }
+.text-md{
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
 .text-sm{
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
+}
+.font-bold{
+  font-weight: 700;
 }
 .font-medium{
   font-weight: 500;
@@ -1269,6 +1305,10 @@ video {
 .text-foreground{
   color: hsl(var(--foreground));
 }
+.text-gray-400{
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
 .text-gray-500{
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
@@ -1281,6 +1321,10 @@ video {
 }
 .text-primary{
   color: hsl(var(--primary));
+}
+.text-primary-700{
+  --tw-text-opacity: 1;
+  color: rgb(120 120 252 / var(--tw-text-opacity));
 }
 .text-primary-750{
   --tw-text-opacity: 1;
@@ -1309,6 +1353,9 @@ video {
 .text-white-50{
   --tw-text-opacity: 1;
   color: rgb(210 210 210 / var(--tw-text-opacity));
+}
+.text-white-50\/90{
+  color: rgb(210 210 210 / 0.9);
 }
 .underline-offset-4{
   text-underline-offset: 4px;
@@ -4857,6 +4904,10 @@ input[type="color"] {
 
 .hover\:bg-sidebar-accent:hover{
   background-color: hsl(var(--sidebar-accent));
+}
+
+.hover\:bg-white-50\/10:hover{
+  background-color: rgb(210 210 210 / 0.1);
 }
 
 .hover\:\!text-customgreys-darkGrey:hover{

@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const courseController_1 = require("../controllers/courseController");
 const router = express_1.default.Router();
-router.get('/', courseController_1.listCourses);
-router.get('/:courseId', courseController_1.getCourse);
+router.get("/", courseController_1.listCourses);
+router.get("/:courseId", courseController_1.getCourse);
 exports.default = router;
 // This code defines the routes for the course-related API endpoints.

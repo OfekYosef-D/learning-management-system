@@ -16,9 +16,9 @@ const customBaseQuery = async (
       const token = await window.Clerk?.session?.getToken();
       if (token) {
         headers.set("Authorization", `Bearer ${token}`);
-        return headers;
       }
-    }
+      return headers;
+    },
   });
 
   try {
@@ -30,10 +30,11 @@ const customBaseQuery = async (
         errorData?.message ||
         result.error.status.toString() ||
         "An error occurred";
-        toast.error(`Error: ${errorMessage}`);
+      toast.error(`Error: ${errorMessage}`);
     }
 
-    const isMutationRequest = (args as FetchArgs).method && (args as FetchArgs).method !== "GET";
+    const isMutationRequest =
+      (args as FetchArgs).method && (args as FetchArgs).method !== "GET";
 
     if (isMutationRequest) {
       const successMessage = result.data?.message;
@@ -42,8 +43,8 @@ const customBaseQuery = async (
 
     if (result.data) {
       result.data = result.data.data;
-    } else if(
-      result.error?.status === 204 || 
+    } else if (
+      result.error?.status === 204 ||
       result.meta?.response?.status === 24
     ) {
       return { data: null };
@@ -53,9 +54,11 @@ const customBaseQuery = async (
   } catch (error: unknown) {
     const errorMessage =
       error instanceof Error ? error.message : "Unknown error";
+
     return { error: { status: "FETCH_ERROR", error: errorMessage } };
   }
 };
+
 
 export const api = createApi({
   baseQuery: customBaseQuery,
@@ -83,15 +86,27 @@ export const api = createApi({
     }),
 
     createStripePaymentIntent: build.mutation<
-    {clientSecret: string}, 
-    {amount: number}>({
+      { clientSecret: string },
+      { amount: number }
+    >({
       query: ({ amount }) => ({
         url: `/transactions/stripe/payment-intent`,
         method: "POST",
-        body: { amount},
+        body: { amount },
+      }),
+    }),
+    createTransaction: build.mutation<Transaction, Partial<Transaction>>({
+      query: (transaction) => ({
+        url: "transactions",
+        method: "POST",
+        body: transaction,
       }),
     }),
   }),
 });
 
-export const { useUpdateUserMutation, useGetCoursesQuery, useGetCourseQuery, useCreateStripePaymentIntentMutation } = api;
+export const { useUpdateUserMutation,
+  useGetCoursesQuery,
+  useGetCourseQuery,
+  useCreateStripePaymentIntentMutation,
+  useCreateTransactionMutation } = api;

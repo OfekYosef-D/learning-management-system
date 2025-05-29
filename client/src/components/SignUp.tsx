@@ -5,7 +5,7 @@ import React from 'react'
 import { dark } from '@clerk/themes'
 import { useSearchParams } from 'next/navigation';
 
-const SignInComponent = () => {
+const SignUpComponent = () => {
     const searchParams = useSearchParams();
     const { user } = useUser();
     const isCheckoutPage = searchParams.get('showSignUp') !== null;
@@ -17,7 +17,7 @@ const SignInComponent = () => {
 
     const getRedirectUrl = () => {
     if (isCheckoutPage) {
-      return `/checkout?step=2&id=${courseId}`;
+      return `/checkout?step=2&id=${courseId}&showSignUp=false`;
     }
 
     const userType = user?.publicMetadata.userType as string;
@@ -25,7 +25,7 @@ const SignInComponent = () => {
       return "/teacher/courses";
     }
     else {
-      return "/student/courses";
+      return "/user/courses";
     }
   }
 
@@ -58,4 +58,4 @@ const SignInComponent = () => {
   )
 }
 
-export default SignInComponent
+export default SignUpComponent
