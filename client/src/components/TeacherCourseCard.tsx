@@ -1,16 +1,22 @@
-import React from 'react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card'
-import Image from 'next/image'
-import { cn } from '@/lib/utils'
-import { Button } from './ui/button'
-import { Pencil, Trash2 } from 'lucide-react'
+import React from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import Image from "next/image";
+import { cn } from "@/lib/utils";
+import { Button } from "./ui/button";
+import { Pencil, Trash2 } from "lucide-react";
 
 const TeacherCourseCard = ({
-    course,
-    onEdit,
-    onDelete,
-    isOwner
-} : TeacherCourseCardProps) => {
+  course,
+  onEdit,
+  onDelete,
+  isOwner,
+}: TeacherCourseCardProps) => {
   return (
     <Card className="course-card-teacher group">
       <CardHeader className="course-card-teacher__header">
@@ -85,7 +91,7 @@ const TeacherCourseCard = ({
         </div>
       </CardContent>
     </Card>
-  )
-}
+  );
+};
 
-export default TeacherCourseCard
+export default TeacherCourseCard;
