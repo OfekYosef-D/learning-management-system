@@ -16,15 +16,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/(dashboard)/layout.js"
     ],
-    "/(dashboard)/user/profile/[[...profile]]/page": [
+    "/(dashboard)/teacher/profile/[[...profile]]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(dashboard)/user/profile/[[...profile]]/page.js"
+      "static/chunks/app/(dashboard)/teacher/profile/[[...profile]]/page.js"
     ],
-    "/(dashboard)/user/billing/page": [
+    "/(dashboard)/teacher/courses/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(dashboard)/user/billing/page.js"
+      "static/chunks/app/(dashboard)/teacher/courses/page.js"
+    ],
+    "/_not-found/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/_not-found/page.js"
     ]
   }
 }

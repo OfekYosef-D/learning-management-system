@@ -25,22 +25,22 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
-const AppSideBar = () => {
+const AppSidebar = () => {
   const { user, isLoaded } = useUser();
   const { signOut } = useClerk();
-  const pathName = usePathname();
+  const pathname = usePathname();
   const { toggleSidebar } = useSidebar();
 
   const navLinks = {
     student: [
       { icon: BookOpen, label: "Courses", href: "/user/courses" },
-      { icon: Briefcase, label: "Billings", href: "/user/billing" },
+      { icon: Briefcase, label: "Billing", href: "/user/billing" },
       { icon: User, label: "Profile", href: "/user/profile" },
       { icon: Settings, label: "Settings", href: "/user/settings" },
     ],
     teacher: [
       { icon: BookOpen, label: "Courses", href: "/teacher/courses" },
-      { icon: DollarSign, label: "Billings", href: "/teacher/billing" },
+      { icon: DollarSign, label: "Billing", href: "/teacher/billing" },
       { icon: User, label: "Profile", href: "/teacher/profile" },
       { icon: Settings, label: "Settings", href: "/teacher/settings" },
     ],
@@ -72,22 +72,22 @@ const AppSideBar = () => {
                   <Image
                     src="/logo.svg"
                     alt="logo"
-                    height={20}
                     width={25}
+                    height={20}
                     className="app-sidebar__logo"
                   />
-                  <p className="app-sidebar__title">Y-Courses</p>
-                  <PanelLeft className="app-sidebar__collapse-icon" />
+                  <p className="app-sidebar__title">EDROH</p>
                 </div>
+                <PanelLeft className="app-sidebar__collapse-icon" />
               </div>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
-        <SidebarMenu className="app-sidebar__menu">
+        <SidebarMenu className="app-sidebar__nav-menu">
           {currentNavLinks.map((link) => {
-            const isActive = pathName.startsWith(link.href);
+            const isActive = pathname.startsWith(link.href);
             return (
               <SidebarMenuItem
                 key={link.href}
@@ -97,29 +97,32 @@ const AppSideBar = () => {
                 )}
               >
                 <SidebarMenuButton
-                    asChild
-                    size="lg"
-                    className={cn(
-                        "app-sidebar__nav-button",
-                        !isActive && "text-customgreys-dirtyGrey"
-                    )}
-                    
+                  asChild
+                  size="lg"
+                  className={cn(
+                    "app-sidebar__nav-button",
+                    !isActive && "text-customgreys-dirtyGrey"
+                  )}
                 >
-                    <Link href={link.href} className="app-sidebar__nav-link">
-                        <link.icon 
-                        className= {isActive ? "text-white-50" : "text-gray-500"}
-                        />
-                            <span 
-                                className={cn(
-                                    "app-sidebar__nav-label",
-                                    isActive ? "text-white-50" 
-                                    : "text-gray-500"
-                                )}>
-                                    {link.label}
-                                </span>
-                    </Link>
+                  <Link
+                    href={link.href}
+                    className="app-sidebar__nav-link"
+                    scroll={false}
+                  >
+                    <link.icon
+                      className={isActive ? "text-white-50" : "text-gray-500"}
+                    />
+                    <span
+                      className={cn(
+                        "app-sidebar__nav-text",
+                        isActive ? "text-white-50" : "text-gray-500"
+                      )}
+                    >
+                      {link.label}
+                    </span>
+                  </Link>
                 </SidebarMenuButton>
-                {isActive && <div className="app-sidebar__active-indicator"></div>}
+                {isActive && <div className="app-sidebar__active-indicator" />}
               </SidebarMenuItem>
             );
           })}
@@ -127,21 +130,21 @@ const AppSideBar = () => {
       </SidebarContent>
       <SidebarFooter>
         <SidebarMenu>
-            <SidebarMenuItem>
-                <SidebarMenuButton asChild>
-                    <button
-                        onClick={() => signOut}
-                        className="app-sidebar__signout"
-                    >
-                        <LogOut className="mr-2 h-6 w-6" />
-                        <span>Sign out</span>
-                    </button>
-                </SidebarMenuButton>
-            </SidebarMenuItem>
+          <SidebarMenuItem>
+            <SidebarMenuButton asChild>
+              <button
+                onClick={() => signOut()}
+                className="app-sidebar__signout"
+              >
+                <LogOut className="mr-2 h-6 w-6" />
+                <span>Sign out</span>
+              </button>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
         </SidebarMenu>
       </SidebarFooter>
     </Sidebar>
   );
 };
 
-export default AppSideBar;
+export default AppSidebar;
