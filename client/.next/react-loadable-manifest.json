@@ -1,14 +1,98 @@
 {
   "..\\node_modules\\@clerk\\nextjs\\dist\\esm\\app-router\\client\\ClerkProvider.js -> ./keyless-creator-reader.js": {
-    "id": "..\\node_modules\\@clerk\\nextjs\\dist\\esm\\app-router\\client\\ClerkProvider.js -> ./keyless-creator-reader.js",
+    "id": 60809,
     "files": [
-      "static/chunks/_app-pages-browser_node_modules_clerk_nextjs_dist_esm_app-router_client_keyless-creator-reader_js.js"
+      "static/chunks/809.3e9215632f9f6f3e.js"
     ]
   },
   "..\\node_modules\\@clerk\\nextjs\\dist\\esm\\app-router\\client\\keyless-cookie-sync.js -> ../keyless-actions.js": {
-    "id": "..\\node_modules\\@clerk\\nextjs\\dist\\esm\\app-router\\client\\keyless-cookie-sync.js -> ../keyless-actions.js",
+    "id": 71619,
     "files": [
-      "static/chunks/_app-pages-browser_node_modules_clerk_nextjs_dist_esm_app-router_keyless-actions_js.js"
+      "static/chunks/1619.2e4fc535a2682980.js"
+    ]
+  },
+  "..\\node_modules\\react-player\\lib\\ReactPlayer.js -> ./Preview": {
+    "id": 45946,
+    "files": [
+      "static/chunks/reactPlayerPreview.ad8b8c68923a2503.js"
+    ]
+  },
+  "..\\node_modules\\react-player\\lib\\players\\index.js -> ./DailyMotion": {
+    "id": 82560,
+    "files": [
+      "static/chunks/reactPlayerDailyMotion.30718ccbf6460fb2.js"
+    ]
+  },
+  "..\\node_modules\\react-player\\lib\\players\\index.js -> ./Facebook": {
+    "id": 13737,
+    "files": [
+      "static/chunks/reactPlayerFacebook.a6efa1f6571a8634.js"
+    ]
+  },
+  "..\\node_modules\\react-player\\lib\\players\\index.js -> ./FilePlayer": {
+    "id": 73050,
+    "files": [
+      "static/chunks/reactPlayerFilePlayer.0be4ec0cd0013294.js"
+    ]
+  },
+  "..\\node_modules\\react-player\\lib\\players\\index.js -> ./Kaltura": {
+    "id": 597,
+    "files": [
+      "static/chunks/reactPlayerKaltura.d3f5d09c6b21102b.js"
+    ]
+  },
+  "..\\node_modules\\react-player\\lib\\players\\index.js -> ./Mixcloud": {
+    "id": 33082,
+    "files": [
+      "static/chunks/reactPlayerMixcloud.cb29069554427244.js"
+    ]
+  },
+  "..\\node_modules\\react-player\\lib\\players\\index.js -> ./Mux": {
+    "id": 29825,
+    "files": [
+      "static/chunks/reactPlayerMux.6142fbeb4b561e77.js"
+    ]
+  },
+  "..\\node_modules\\react-player\\lib\\players\\index.js -> ./SoundCloud": {
+    "id": 90865,
+    "files": [
+      "static/chunks/reactPlayerSoundCloud.775c43666f785cbf.js"
+    ]
+  },
+  "..\\node_modules\\react-player\\lib\\players\\index.js -> ./Streamable": {
+    "id": 77449,
+    "files": [
+      "static/chunks/reactPlayerStreamable.60f8a628246a51d4.js"
+    ]
+  },
+  "..\\node_modules\\react-player\\lib\\players\\index.js -> ./Twitch": {
+    "id": 21698,
+    "files": [
+      "static/chunks/reactPlayerTwitch.8021b47fe959837e.js"
+    ]
+  },
+  "..\\node_modules\\react-player\\lib\\players\\index.js -> ./Vidyard": {
+    "id": 61452,
+    "files": [
+      "static/chunks/reactPlayerVidyard.e2e6a65bdaea3e52.js"
+    ]
+  },
+  "..\\node_modules\\react-player\\lib\\players\\index.js -> ./Vimeo": {
+    "id": 11627,
+    "files": [
+      "static/chunks/reactPlayerVimeo.ff3dc832b1358ab9.js"
+    ]
+  },
+  "..\\node_modules\\react-player\\lib\\players\\index.js -> ./Wistia": {
+    "id": 11684,
+    "files": [
+      "static/chunks/reactPlayerWistia.abfa57915acfaea8.js"
+    ]
+  },
+  "..\\node_modules\\react-player\\lib\\players\\index.js -> ./YouTube": {
+    "id": 75690,
+    "files": [
+      "static/chunks/reactPlayerYouTube.20ae656c5cf51217.js"
     ]
   }
 }

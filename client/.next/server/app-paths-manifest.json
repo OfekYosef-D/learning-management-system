@@ -1,6 +1,20 @@
 {
-  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/_not-found/page": "app/_not-found/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/page": "app/page.js",
+  "/(auth)/signin/[[...signin]]/page": "app/(auth)/signin/[[...signin]]/page.js",
+  "/(auth)/signup/[[...signup]]/page": "app/(auth)/signup/[[...signup]]/page.js",
+  "/(dashboard)/teacher/billing/page": "app/(dashboard)/teacher/billing/page.js",
   "/(dashboard)/teacher/courses/[id]/page": "app/(dashboard)/teacher/courses/[id]/page.js",
-  "/(dashboard)/teacher/courses/page": "app/(dashboard)/teacher/courses/page.js"
+  "/(dashboard)/teacher/profile/[[...profile]]/page": "app/(dashboard)/teacher/profile/[[...profile]]/page.js",
+  "/(dashboard)/teacher/settings/page": "app/(dashboard)/teacher/settings/page.js",
+  "/(dashboard)/teacher/courses/page": "app/(dashboard)/teacher/courses/page.js",
+  "/(dashboard)/user/billing/page": "app/(dashboard)/user/billing/page.js",
+  "/(dashboard)/user/profile/[[...profile]]/page": "app/(dashboard)/user/profile/[[...profile]]/page.js",
+  "/(dashboard)/user/courses/page": "app/(dashboard)/user/courses/page.js",
+  "/(dashboard)/user/courses/[courseId]/chapters/[chapterId]/page": "app/(dashboard)/user/courses/[courseId]/chapters/[chapterId]/page.js",
+  "/(nondashboard)/checkout/page": "app/(nondashboard)/checkout/page.js",
+  "/(dashboard)/user/settings/page": "app/(dashboard)/user/settings/page.js",
+  "/(nondashboard)/search/page": "app/(nondashboard)/search/page.js",
+  "/(nondashboard)/landing/page": "app/(nondashboard)/landing/page.js"
 }
