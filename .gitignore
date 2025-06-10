@@ -5,7 +5,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Production builds
-.next/
+client/.next/
 out/
 dist/
 build/
@@ -15,9 +15,16 @@ build/
 .env.local
 .env.development.local
 .env.test.local
-.env.production.local
+.env.production.
+client/.env.local
+client/.env.development
+client/.env.production
+client/.env
 server/.env
 *.env
+
+server/shared-local-distance.db
+shared-local-distance.db
 
 # AWS
 .aws/
