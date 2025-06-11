@@ -12,10 +12,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.deleteCourse = exports.updateCourse = exports.createCourse = exports.getCourse = exports.listCourses = void 0;
+exports.getUploadVideoUrl = exports.deleteCourse = exports.updateCourse = exports.createCourse = exports.getCourse = exports.listCourses = void 0;
 const courseModel_1 = __importDefault(require("../models/courseModel"));
 const uuid_1 = require("uuid");
 const express_1 = require("@clerk/express");
+const aws_sdk_1 = __importDefault(require("aws-sdk"));
+const s3 = new aws_sdk_1.default.S3();
 const listCourses = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { category } = req.query;
     try {
@@ -138,3 +140,30 @@ const deleteCourse = (req, res) => __awaiter(void 0, void 0, void 0, function* (
     }
 });
 exports.deleteCourse = deleteCourse;
+const getUploadVideoUrl = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const { fileName, fileType } = req.body;
+    if (!fileName || !fileType) {
+        res.status(400).json({ message: "File name and type are required" });
+        return;
+    }
+    try {
+        const uniqueId = (0, uuid_1.v4)();
+        const s3key = `videos/${uniqueId}/${fileName}`;
+        const s3Params = {
+            Bucket: process.env.S3_BUCKET_NAME || "",
+            Key: s3key,
+            Expires: 60, // URL valid for 60 seconds
+            ContentType: fileType,
+        };
+        const uploadUrl = s3.getSignedUrl("putObject", s3Params);
+        const videoUrl = `${process.env.S3_BASE_URL}/videos/${uniqueId}/${fileName}`;
+        res.json({
+            message: "Upload URL generated successfully",
+            data: { uploadUrl, videoUrl }
+        });
+    }
+    catch (error) {
+        res.status(500).json({ message: "Error generating upload URL", error });
+    }
+});
+exports.getUploadVideoUrl = getUploadVideoUrl;
