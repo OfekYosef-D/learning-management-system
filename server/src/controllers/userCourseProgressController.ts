@@ -18,19 +18,53 @@ export const getUserEnrolledCourses = async (
   }
 
   try {
+    console.log("Fetching enrolled courses for userId:", userId);
+    
     const enrolledCourses = await UserCourseProgress.query("userId")
       .eq(userId)
       .exec();
+    
+    console.log("Found enrolled courses progress:", enrolledCourses.length);
+    
     const courseIds = enrolledCourses.map((item: any) => item.courseId);
-    const courses = await Course.batchGet(courseIds);
+    console.log("Course IDs to fetch:", courseIds);
+
+    // Handle case when user has no enrolled courses
+    if (courseIds.length === 0) {
+      res.json({
+        message: "No enrolled courses found",
+        data: [],
+      });
+      return;
+    }
+
+    // Filter out any invalid courseIds (null, undefined, empty strings)
+    const validCourseIds = courseIds.filter(id => id && typeof id === 'string' && id.trim().length > 0);
+    console.log("Valid course IDs:", validCourseIds);
+
+    if (validCourseIds.length === 0) {
+      res.json({
+        message: "No valid course IDs found",
+        data: [],
+      });
+      return;
+    }
+
+    const courses = await Course.batchGet(validCourseIds);
+    console.log("Successfully fetched courses:", courses.length);
+    
     res.json({
       message: "Enrolled courses retrieved successfully",
-      data: courses,
+      data: courses || [],
     });
   } catch (error) {
+    console.error("Error in getUserEnrolledCourses:", error);
     res
       .status(500)
-      .json({ message: "Error retrieving enrolled courses", error });
+      .json({ 
+        message: "Error retrieving enrolled courses", 
+        error: error instanceof Error ? error.message : error 
+      });
   }
 };
 

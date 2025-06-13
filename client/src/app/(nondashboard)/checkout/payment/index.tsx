@@ -1,4 +1,4 @@
-import React, { use } from "react";
+import React from "react";
 import StripeProvider from "./StripeProvider";
 import {
   PaymentElement,
@@ -17,7 +17,7 @@ import { toast } from "sonner";
 const PaymentPageContent = () => {
   const stripe = useStripe();
   const elements = useElements();
-  const [ createTransaction ] = useCreateTransactionMutation();
+  const [createTransaction] = useCreateTransactionMutation();
   const { navigateToStep } = useCheckoutNavigation();
   const { course, courseId } = useCurrentCourse();
   const { user } = useUser();
@@ -27,15 +27,15 @@ const PaymentPageContent = () => {
     e.preventDefault();
 
     if (!stripe || !elements) {
-        toast.error("Stripe is not loaded yet. Please try again later.");
-        return;
+      toast.error("Stripe service is not available");
+      return;
     }
 
-    const baseUrl = process.env.NEXT_PUBLIC_LOCAL_URL 
-    ? `http://${process.env.NEXT_PUBLIC_LOCAL_URL}`
-    : process.env.NEXT_PUBLIC_VERCEL_URL 
-    ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
-    : undefined
+    const baseUrl = process.env.NEXT_PUBLIC_LOCAL_URL
+      ? `http://${process.env.NEXT_PUBLIC_LOCAL_URL}`
+      : process.env.NEXT_PUBLIC_VERCEL_URL
+      ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
+      : undefined;
 
     const result = await stripe.confirmPayment({
       elements,
@@ -43,27 +43,25 @@ const PaymentPageContent = () => {
         return_url: `${baseUrl}/checkout?step=3&id=${courseId}`,
       },
       redirect: "if_required",
-    })
-    
+    });
 
     if (result.paymentIntent?.status === "succeeded") {
-        const transactionData: Partial<Transaction> = {
-            transactionId: result.paymentIntent.id,
-            userId: user?.id,
-            courseId: courseId,
-            paymentProvider: "stripe",
-            amount: course?.price || 0,
-        }
+      const transactionData: Partial<Transaction> = {
+        transactionId: result.paymentIntent.id,
+        userId: user?.id,
+        courseId: courseId,
+        paymentProvider: "stripe",
+        amount: course?.price || 0,
+      };
 
-        await createTransaction(transactionData),
-        navigateToStep(3);
+      await createTransaction(transactionData), navigateToStep(3);
     }
-  }
+  };
 
   const handleSignOutAndNavigate = async () => {
     await signOut();
     navigateToStep(1);
-  }
+  };
 
   if (!course) return null;
 
@@ -128,7 +126,7 @@ const PaymentPageContent = () => {
       </div>
     </div>
   );
-}
+};
 
 const PaymentPage = () => (
   <StripeProvider>
